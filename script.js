@@ -6,6 +6,7 @@ function setup() {
     createCanvas(400, 400);
     cols = width/size;
     rows = height/size;
+    angleMode(DEGREES)
 }
 
 function draw() {
@@ -15,8 +16,9 @@ function draw() {
         arrows[i] = [];
         yoff = 0;
         for(let j = 0; j < rows; j++) {
-            let angle = noise(xoff, yoff);
-            text(round(angle, 2), size/2+i*size, size/2+j*size);
+            let angle = map(noise(xoff, yoff), 0, 1, 0, 360);
+            //text(round(angle, 2), size/2+i*size, size/2+j*size);
+            arrow[i][j] = createVector();
             yoff += increment;
         }
         xoff += increment
