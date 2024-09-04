@@ -7,3 +7,13 @@ function setup() {
     cols = width/size;
     rows = height/size;
 }
+
+function draw() {
+    background(220);
+    for (let i = 0; i < cols; i++) {
+        arrows[i] = [];
+        for(let j = 0; j < rows; j++) {
+
+        }
+    }
+}
